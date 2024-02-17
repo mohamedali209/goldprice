@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "104299146469",
+    "project_id": "dahab-2f51a",
+    "storage_bucket": "dahab-2f51a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:104299146469:android:2adba7a64a1335ef7cf80c",
+        "android_client_info": {
+          "package_name": "com.example.dahab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "104299146469-qju75a9ujh5b3cqb0dpea5uh6hq1lsav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPRkij0KPbcNpFV7sVarHcayF5dF1Uniw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "104299146469-qju75a9ujh5b3cqb0dpea5uh6hq1lsav.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "104299146469-5ku3gjkode1mdp51n42g5namav5nrd60.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dahab"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
