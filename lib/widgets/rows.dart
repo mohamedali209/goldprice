@@ -2,9 +2,8 @@ import 'package:arabic_font/arabic_font.dart';
 
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class Rows extends StatelessWidget {
-  Rows({ this.sale,  this.buy, required this.karat,required this.color});
+ const Rows({ this.sale,  this.buy, required this.karat,required this.color});
   final int? buy;
   final int? sale;
   final String karat;
@@ -14,19 +13,19 @@ class Rows extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           color:color,
-          borderRadius: BorderRadius.all(Radius.circular(15))),
+          borderRadius:const BorderRadius.all(Radius.circular(15))),
       height: 45,
       width: 380,
       child: Row(
         textDirection: TextDirection.rtl,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(
+       const   SizedBox(
             width: 10,
           ),
           Text(
             '$karat',
-            style: ArabicTextStyle(
+            style:const ArabicTextStyle(
                 arabicFont: ArabicFont.cairo,
                 fontWeight: FontWeight.bold,
                 fontSize: 18),
@@ -42,7 +41,7 @@ class Rows extends StatelessWidget {
             padding: const EdgeInsets.only(right: 155),
             child: Text(
               '$sale',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
           )
         ],

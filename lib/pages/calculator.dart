@@ -66,7 +66,7 @@ class _CalculatorState extends State<calculator> {
         onPressed: () => buttonPressed(buttonText),
         child: Text(
           buttonText,
-          style: TextStyle(
+          style:const TextStyle(
             color: Colors.amber,
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
@@ -94,7 +94,7 @@ centerTitle: true,      ),
                 alignment: Alignment.bottomRight,
                 child: Text(
                   output,
-                  style: TextStyle(
+                  style:const TextStyle(
                     color: Colors.amber,
                     fontSize: 48.0,
                     fontWeight: FontWeight.bold,

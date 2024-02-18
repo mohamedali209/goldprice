@@ -14,7 +14,7 @@ class loginbutton extends StatelessWidget {
     return Container(
         height: 50,
         width: 300,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(15))),
         child: Row(
@@ -30,7 +30,7 @@ class loginbutton extends StatelessWidget {
             ),
             Text(
               '$loginwith',
-              style: TextStyle(
+              style:const TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontSize: 19),

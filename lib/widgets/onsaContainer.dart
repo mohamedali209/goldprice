@@ -37,7 +37,7 @@ class _ElshashaState extends State<Elshasha> {
                   '${snapshot.data??0}',
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
-                Icon(
+               const Icon(
                   Icons.arrow_upward,
                   color: Colors.green,
                 )

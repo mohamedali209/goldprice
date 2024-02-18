@@ -39,7 +39,7 @@ class _loginpageState extends State<loginpage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
+        const  Center(
               child: Text(
             'اهلا بيك',
             style: ArabicTextStyle(
@@ -47,8 +47,9 @@ class _loginpageState extends State<loginpage> {
                 color: Colors.amber,
                 fontSize: 50),
           )),
-          SizedBox(height: 15),
-          Text(
+        const  SizedBox(height: 15),
+        const  Text(
+          
             textDirection: TextDirection.rtl,
             textAlign: TextAlign.center,
             'لمتابعة اسعار الذهب و الفضة لحظة ب لحظة في السوق المصري  قم بانشاء حساب .',
@@ -57,7 +58,7 @@ class _loginpageState extends State<loginpage> {
                 color: Colors.white,
                 fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+       const   SizedBox(
             height: 30,
           ),
           GestureDetector(
@@ -68,7 +69,7 @@ class _loginpageState extends State<loginpage> {
                 image: 'assets/gmail-new-icon5198.jpg',
                 loginwith: 'Login With Gmail'),
           ),
-          SizedBox(
+      const    SizedBox(
             height: 10,
           ),
           GestureDetector(

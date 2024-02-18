@@ -10,7 +10,7 @@ class smallBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration:const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(50))),
       height: 45,
@@ -20,7 +20,7 @@ class smallBox extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text('$esm',
-                style: ArabicTextStyle(
+               style:const ArabicTextStyle(
                   arabicFont: ArabicFont.cairo,
                   fontWeight: FontWeight.bold,
                 )),
@@ -29,7 +29,7 @@ class smallBox extends StatelessWidget {
             padding: const EdgeInsets.only(right: 20, left: 10),
             child: Text(
               '$se3r',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
           )
         ],

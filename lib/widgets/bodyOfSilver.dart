@@ -78,7 +78,7 @@ class bodyOfSilver extends StatelessWidget {
                         fontWeight: FontWeight.bold))
               ],
             ),
-            Padding(
+        const    Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Rows(
                 buy: 47,
@@ -87,25 +87,25 @@ class bodyOfSilver extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(
+         const   SizedBox(
               height: 20,
             ),
-            Rows(
+      const      Rows(
               buy: 33,
               sale: 35,
               karat: 'عيار 925 ',
               color: Colors.white,
             ),
-            SizedBox(
+        const    SizedBox(
               height: 20,
             ),
-            Rows(
+          const  Rows(
               buy: 28,
               sale: 30,
               karat: 'عيار 800',
               color: Colors.white,
             ),
-            SizedBox(
+         const   SizedBox(
               height: 20,
             ),
           ],

@@ -18,7 +18,7 @@ class update extends StatelessWidget {
           TextFormField(
             controller: controller,
             keyboardType: TextInputType.number,
-            decoration: InputDecoration(
+            decoration:const InputDecoration(
                 hintText: 'dollar', border: OutlineInputBorder()),
             onChanged: (value) {
               dollar2 = double.parse(value);
@@ -28,7 +28,7 @@ class update extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context, dollar2);
               },
-              icon: Icon(Icons.update))
+              icon:const Icon(Icons.update))
         ],
       ),
     );

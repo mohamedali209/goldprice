@@ -28,7 +28,7 @@ class body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
+     const   Padding(
           padding: const EdgeInsets.only(top: 20,left: 40),
           child: categories(),
         ),
@@ -79,7 +79,7 @@ class body extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            SizedBox(
+       const     SizedBox(
               height: 10,
             ),
             Rows(
@@ -88,7 +88,7 @@ class body extends StatelessWidget {
               karat: 'عيار 21',
               color: Colors.white,
             ),
-            SizedBox(
+         const   SizedBox(
               height: 10,
             ),
             Rows(
@@ -97,7 +97,7 @@ class body extends StatelessWidget {
               karat: 'عيار 18',
               color: Colors.white,
             ),
-            SizedBox(
+        const    SizedBox(
               height: 10,
             ),
             Rows(
@@ -106,7 +106,7 @@ class body extends StatelessWidget {
               karat: 'عيار 14',
               color: Colors.white,
             ),
-            SizedBox(
+       const     SizedBox(
               height: 15,
             ),
             Row(
@@ -119,7 +119,7 @@ class body extends StatelessWidget {
                     esm: 'الاونصة', se3r: addCommasToNumberString3(se3ronsa)),
               ],
             ),
-            SizedBox(
+          const  SizedBox(
               height: 20,
             ),
             Elshasha()
