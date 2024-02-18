@@ -1,7 +1,7 @@
 import 'package:dahab/api/helper.dart';
 import 'package:dahab/pages/calculator.dart';
 import 'package:dahab/widgets/appbar.dart';
-import 'package:dahab/widgets/bodyOfAll.dart';
+import 'package:dahab/widgets/bodyOfgold.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
