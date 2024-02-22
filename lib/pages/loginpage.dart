@@ -1,4 +1,5 @@
 import 'package:arabic_font/arabic_font.dart';
+import 'package:dahab/pages/home.dart';
 import 'package:dahab/widgets/loginbutton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,6 @@ class loginpage extends StatefulWidget {
 
 class _loginpageState extends State<loginpage> {
   Future<UserCredential> SignInWithGoogle() async {
-    
     // Trigger the authentication flow
     final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
@@ -39,7 +39,7 @@ class _loginpageState extends State<loginpage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-        const  Center(
+          const Center(
               child: Text(
             'اهلا بيك',
             style: ArabicTextStyle(
@@ -47,29 +47,32 @@ class _loginpageState extends State<loginpage> {
                 color: Colors.amber,
                 fontSize: 50),
           )),
-        const  SizedBox(height: 15),
-        const  Text(
-          
-            textDirection: TextDirection.rtl,
-            textAlign: TextAlign.center,
-            'لمتابعة اسعار الذهب و الفضة لحظة ب لحظة في السوق المصري  قم بانشاء حساب .',
-            style: ArabicTextStyle(
-                arabicFont: ArabicFont.cairo,
-                color: Colors.white,
-                fontWeight: FontWeight.bold),
+          const SizedBox(height: 15),
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10),
+            child: Text(
+              textDirection: TextDirection.rtl,
+              textAlign: TextAlign.center,
+              'لمتابعة اسعار الذهب و الفضة لحظة ب لحظة في السوق المصري  قم بانشاء حساب .',
+              style: ArabicTextStyle(
+                  arabicFont: ArabicFont.cairo,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
-       const   SizedBox(
+          const SizedBox(
             height: 30,
           ),
           GestureDetector(
-            onTap: () async{
-             await SignInWithGoogle();
+            onTap: () async {
+              await SignInWithGoogle();
+              Navigator.pushNamed(context, Homepage.id);
             },
             child: loginbutton(
                 image: 'assets/gmail-new-icon5198.jpg',
                 loginwith: 'Login With Gmail'),
           ),
-      const    SizedBox(
+          const SizedBox(
             height: 10,
           ),
           GestureDetector(

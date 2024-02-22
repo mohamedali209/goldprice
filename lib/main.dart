@@ -29,7 +29,7 @@ class As3arElsouq extends StatelessWidget {
         loginpage.id: (context) => loginpage(),
         update.id:(context) =>update()
       },
-      initialRoute: Homepage.id,
+      initialRoute: loginpage.id,
     );
   }
 }
