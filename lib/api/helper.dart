@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class Api {
-  String apikey = 'JKFX4Y9CITFBPGYF7J1J211YF7J1k';
+  String apikey = 'JKFX4Y9CITFBPGYF7J1J211YF7J1J';
   Future<dynamic> get() async {
     http.Response response = await http.get(
         Uri.parse(

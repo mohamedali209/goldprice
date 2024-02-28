@@ -31,6 +31,8 @@ class _loginpageState extends State<loginpage> {
     // Once signed in, return the UserCredential
     return await FirebaseAuth.instance.signInWithCredential(credential);
   }
+ 
+
 
   @override
   Widget build(BuildContext context) {
@@ -68,19 +70,19 @@ class _loginpageState extends State<loginpage> {
               await SignInWithGoogle();
               Navigator.pushNamed(context, Homepage.id);
             },
-            child: loginbutton(
-                image: 'assets/gmail-new-icon5198.jpg',
-                loginwith: 'Login With Gmail'),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, Homepage.id);
+              },
+              child: loginbutton(
+                  image: 'assets/gmail-new-icon5198.jpg',
+                  loginwith: 'Login With Gmail'),
+            ),
           ),
           const SizedBox(
             height: 10,
           ),
-          GestureDetector(
-            onTap: () {},
-            child: loginbutton(
-                image: 'assets/Facebook_Logo_(2019).png',
-                loginwith: 'Login With Facebook'),
-          )
+         
         ],
       ),
     );
