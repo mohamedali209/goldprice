@@ -7,12 +7,10 @@ import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
   Homepage({
-    this.dollarpriceupdate,
     super.key,
   });
   static String id = 'homepage';
-  double? dollarpriceupdate;
-  CollectionReference users = FirebaseFirestore.instance.collection('users');
+ final CollectionReference users = FirebaseFirestore.instance.collection('users');
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<DocumentSnapshot>(

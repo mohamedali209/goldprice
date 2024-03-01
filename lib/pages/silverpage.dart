@@ -18,7 +18,7 @@ class silverpage extends StatelessWidget {
               child: Icon(Icons.calculate)),
         backgroundColor: Color.fromARGB(132, 154, 176, 194),
         appBar:const Appbar(),
-        body:const bodyOfSilver());
+        body: bodyOfSilver());
   }
 }
 

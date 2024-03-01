@@ -3,6 +3,7 @@ import 'package:dahab/commas.dart';
 import 'package:dahab/widgets/categories.dart';
 import 'package:dahab/widgets/onsaContainer.dart';
 import 'package:dahab/widgets/rows.dart';
+import 'package:dahab/widgets/saleorbuy.dart';
 import 'package:dahab/widgets/smallbox.dart';
 import 'package:flutter/material.dart';
 
@@ -28,8 +29,8 @@ class body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-     const   Padding(
-          padding: const EdgeInsets.only(top: 20,left: 40),
+        const Padding(
+          padding: const EdgeInsets.only(top: 20, left: 40),
           child: categories(),
         ),
         Column(
@@ -52,22 +53,12 @@ class body extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(right: 70),
-                  child: Text('بيع',
-                      style: ArabicTextStyle(
-                          arabicFont: ArabicFont.arefRuqaa,
-                          color: Colors.white,
-                          fontSize: 45,
-                          fontWeight: FontWeight.bold)),
+                  child: saleORbuy(saleorbuy: 'بيع'),
                 ),
                 SizedBox(
                   width: 50,
                 ),
-                Text('شراء',
-                    style: ArabicTextStyle(
-                        arabicFont: ArabicFont.arefRuqaa,
-                        color: Colors.white,
-                        fontSize: 45,
-                        fontWeight: FontWeight.bold))
+              saleORbuy(saleorbuy: 'شراء')
               ],
             ),
             Padding(
@@ -79,7 +70,7 @@ class body extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-       const     SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Rows(
@@ -88,7 +79,7 @@ class body extends StatelessWidget {
               karat: 'عيار 21',
               color: Colors.white,
             ),
-         const   SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Rows(
@@ -97,7 +88,7 @@ class body extends StatelessWidget {
               karat: 'عيار 18',
               color: Colors.white,
             ),
-        const    SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Rows(
@@ -106,7 +97,7 @@ class body extends StatelessWidget {
               karat: 'عيار 14',
               color: Colors.white,
             ),
-       const     SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
@@ -119,7 +110,7 @@ class body extends StatelessWidget {
                     esm: 'الاونصة', se3r: addCommasToNumberString3(se3ronsa)),
               ],
             ),
-          const  SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Elshasha()
@@ -129,4 +120,5 @@ class body extends StatelessWidget {
     );
   }
 }
+
 

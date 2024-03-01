@@ -1,4 +1,4 @@
-import 'package:dahab/pages/home.dart';
+import 'package:dahab/widgets/customtextfield.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -20,47 +20,50 @@ class _updateState extends State<update> {
 
   @override
   Widget build(BuildContext context) {
-   return FutureBuilder<DocumentSnapshot>(
+    return FutureBuilder<DocumentSnapshot>(
       future: users.doc('fccf0BBPaj29P0QBj6E5').get(),
       builder: (context, snapshot) {
         return Scaffold(
-          backgroundColor: Color.fromARGB(255, 11, 38, 60),
+          backgroundColor:const Color.fromARGB(255, 11, 38, 60),
           appBar: AppBar(
-            backgroundColor: Color.fromARGB(255, 11, 38, 60),
+            backgroundColor:const Color.fromARGB(255, 11, 38, 60),
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              TextFormField(
-                controller: controller,
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                    focusColor: Colors.amber,
-                    hintText: 'dollar',
-                    hintStyle: TextStyle(color: Colors.amber),
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.amber),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.amber))),
-                onFieldSubmitted: (value) async {
+             customtextfield(hinttext: 'dollar',onFieldSubmitted: (value) async {
                   controller.text = value;
                   await users
                       .doc('fccf0BBPaj29P0QBj6E5')
                       .update({'dollar': double.parse(controller.text)});
-                },
-              ),
-              IconButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return Homepage(
-                          dollarpriceupdate: snapshot.data!['dollar'],
-                        );
-                      },
-                    ));
-                  },
-                  icon: const Icon(Icons.update))
+                } )
+             , customtextfield(hinttext: '999',onFieldSubmitted: (value) async {
+                  controller.text = value;
+                  await users
+                      .doc('fccf0BBPaj29P0QBj6E5')
+                      .update({'999': double.parse(controller.text)});
+                },),customtextfield(hinttext: '925',onFieldSubmitted: (value) async {
+                  controller.text = value;
+                  await users
+                      .doc('fccf0BBPaj29P0QBj6E5')
+                      .update({'925': double.parse(controller.text)});
+                },),
+                customtextfield(hinttext: '800',onFieldSubmitted: (value) async {
+                  controller.text = value;
+                  await users
+                      .doc('fccf0BBPaj29P0QBj6E5')
+                      .update({'800': double.parse(controller.text)});
+                },),
+              Container(
+               
+                decoration:const BoxDecoration( color: Colors.amber,borderRadius: BorderRadius.all(Radius.circular(30))),
+                child: IconButton(
+                  color: Colors.black,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(Icons.update_sharp)),
+              )
             ],
           ),
         );
@@ -68,3 +71,4 @@ class _updateState extends State<update> {
     );
   }
 }
+

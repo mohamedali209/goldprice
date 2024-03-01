@@ -31,27 +31,29 @@ class _loginpageState extends State<loginpage> {
     // Once signed in, return the UserCredential
     return await FirebaseAuth.instance.signInWithCredential(credential);
   }
- 
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor:Color.fromARGB(255, 4, 23, 38),centerTitle: true,title: Text('السوق',style: ArabicTextStyle(arabicFont: ArabicFont.arefRuqaa,fontSize: 50,color: Colors.white),),),
       backgroundColor: Color.fromARGB(255, 4, 23, 38),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Center(
-              child: Text(
-            'اهلا بيك',
-            style: ArabicTextStyle(
-                arabicFont: ArabicFont.arefRuqaa,
-                color: Colors.amber,
-                fontSize: 50),
-          )),
-          const SizedBox(height: 15),
+            
+        const  Padding(
+            padding:  EdgeInsets.only(bottom: 30),
+            child:  Center(
+                child: Text(
+              'اهلا بيك',
+              style: ArabicTextStyle(
+                  arabicFont: ArabicFont.arefRuqaa,
+                  color: Colors.amber,
+                  fontSize: 50),
+            )),
+          ),
           const Padding(
-            padding: EdgeInsets.only(left: 10, right: 10),
+            padding: EdgeInsets.only(left: 10, right: 10,bottom: 30),
             child: Text(
               textDirection: TextDirection.rtl,
               textAlign: TextAlign.center,
@@ -62,31 +64,26 @@ class _loginpageState extends State<loginpage> {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          const SizedBox(
-            height: 30,
-          ),
-          GestureDetector(
-            onTap: () async {
-              await SignInWithGoogle();
-              Navigator.pushNamed(context, Homepage.id);
-            },
+        
+          Padding(
+            padding: const EdgeInsets.only(bottom: 30),
             child: GestureDetector(
-              onTap: () {
+              onTap: () async {
+                await SignInWithGoogle();
                 Navigator.pushNamed(context, Homepage.id);
               },
-              child: loginbutton(
-                  image: 'assets/gmail-new-icon5198.jpg',
-                  loginwith: 'Login With Gmail'),
+                child: loginbutton(
+                    image: 'assets/gmail-new-icon5198.jpg',
+                    loginwith: 'Login With Gmail'),
+              
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 80,
           ),
-         
         ],
       ),
     );
   }
 }
 
-// ignore: must_be_immutable

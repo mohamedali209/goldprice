@@ -1,3 +1,4 @@
+import 'package:arabic_font/arabic_font.dart';
 import 'package:dahab/pages/update.dart';
 import 'package:flutter/material.dart';
 
@@ -45,13 +46,7 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: const Color.fromARGB(40, 22, 23, 90),
       title: const Text(
         ' السوق  ',
-        style: TextStyle(
-          fontFamily: 'Tajawal',
-          fontWeight: FontWeight.bold,
-          fontSize: 35,
-          color: Colors.white,
-        ),
-      ),
+style: ArabicTextStyle(arabicFont:ArabicFont.arefRuqaa,fontSize: 40,color: Colors.white ),      ),
     );
   }
 

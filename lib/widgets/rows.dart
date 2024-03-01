@@ -38,7 +38,7 @@ class Rows extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 155),
+            padding: const EdgeInsets.only(right: 150),
             child: Text(
               '$sale',
               style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
