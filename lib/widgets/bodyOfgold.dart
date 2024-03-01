@@ -1,5 +1,5 @@
 import 'package:arabic_font/arabic_font.dart';
-import 'package:dahab/commas.dart';
+import 'package:dahab/widgets/commas.dart';
 import 'package:dahab/widgets/categories.dart';
 import 'package:dahab/widgets/onsaContainer.dart';
 import 'package:dahab/widgets/rows.dart';
